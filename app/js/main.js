@@ -138,3 +138,20 @@ function changeBar() {
 function showTime() {
 	timer = setInterval(() => changeBar(), 500);
 }
+
+// SWITCHING MUSIC
+function nextMusic(mode) {
+	playBtn.classList.remove("_pause");
+	playBtn.classList.add("_play");
+	document.getElementById(currentAudio).pause();
+	isPlaying = false;
+	clearInterval(timer);
+
+	if (mode === "next") {
+		currentId = currentId + 1 > list.length - 1 ? 0 : currentId + 1;
+		init();
+	} else {
+		currentId = currentId - 1 < 0 ? list.length - 1 : currentId - 1;
+		init();
+	}
+}
