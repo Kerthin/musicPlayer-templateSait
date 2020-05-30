@@ -72,26 +72,43 @@
 	}
 ];
 
-	let currentId = 0;
-	let isPlaying = false;
-	let isLoop = true;
-	let loopOne = false;
-	let isShuffle = false;
-	let currentAudio = "music1";
-	let timer = null;
+let currentId = 0;
+let isPlaying = false;
+let isLoop = true;
+let loopOne = false;
+let isShuffle = false;
+let currentAudio = "music1";
+let timer = null;
 
-	const currentTimeIndicator = document.querySelector(".musicTime__current");
-	const leftTimeIndicator = document.querySelector(".musicTime__last");
-	const progressBar = document.getElementById("length");
-	const title = document.querySelector(".musicInfo__name");
-	const author = document.querySelector(".musicInfo__author");
+const currentTimeIndicator = document.querySelector(".musicTime__current");
+const leftTimeIndicator = document.querySelector(".musicTime__last");
+const progressBar = document.getElementById("length");
+const title = document.querySelector(".musicInfo__name");
+const author = document.querySelector(".musicInfo__author");
 
-	const albumClass = document.getElementById("jsAlbum");
-	const playBtn = document.getElementById("play");
-	const loopBtn = document.getElementById("loop");
-	const shuffleBtn = document.getElementById("shuffle");
-	const forwardBtn = document.getElementById("forward");
-	const backwardBtn = document.getElementById("backward");
-	const prevBtn = document.getElementById("prev");
-	const nextBtn = document.getElementById("next");
-	const progressDiv = document.getElementById("progress");
+const albumClass = document.getElementById("jsAlbum");
+const playBtn = document.getElementById("play");
+const loopBtn = document.getElementById("loop");
+const shuffleBtn = document.getElementById("shuffle");
+const forwardBtn = document.getElementById("forward");
+const backwardBtn = document.getElementById("backward");
+const prevBtn = document.getElementById("prev");
+const nextBtn = document.getElementById("next");
+const progressDiv = document.getElementById("progress");
+
+// BUTTON PLAY
+function play(e) {
+	if (!isPlaying) {
+		e.target.classList.remove("_play");
+		e.target.classList.add("_pause");
+		isPlaying = true;
+		document.getElementById(currentAudio).play();
+		showTime();
+	} else {
+		e.target.classList.remove("_pause");
+		e.target.classList.add("_play");
+		isPlaying = false;
+		document.getElementById(currentAudio).pause();
+		clearInterval(timer);
+	}
+}
