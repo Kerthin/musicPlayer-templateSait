@@ -170,7 +170,7 @@
 		            inset -4px -4px 6px -1px rgba(0,0,0,0.3);
 	}
 
-	.album__internal {
+	&__internal {
 		position: relative;
 		margin-top: 45px;
 		display: inline-block;
@@ -203,7 +203,7 @@
 	width: 185px;
 	height: 58px;
 
-	.musicInfo__name {
+	&__name {
 		font-family: sans-serif;
 		font-size: 30px;
 		text-align: center;
@@ -211,7 +211,7 @@
 		margin-bottom: 8px;
 		color: #424234;
 	}
-	.musicInfo__author {
+	&__author {
 		font-family: sans-serif;
 		font-size: 15px;
 		text-align: center;
@@ -228,18 +228,58 @@
 	width: 340px;
 	height: 15px;
 
-	.musicTime__current,
-	.musicTime__last {
+	&__current,
+	&__last {
 		font-family: sans-serif;
 		font-size: 15px;
 		text-align: center;
 		font-weight: 100;
 		color: #a3a496;
 	}
-	.musicTime__current {
+	&__current {
 		float: left;
 	}
-	.musicTime__last {
+	&__last {
 		float: right;
+	}
+}
+
+.musicBar {
+	position: absolute;
+	top: 572px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 340px;
+	height: 7px;
+	border-radius: 5px;
+	background-color: #efefef;
+	cursor: pointer;
+
+	&__length {
+		display: block;
+		width: 0%;
+		background: #749064;
+		height: 100%;
+		border-radius: 5px;
+		transition: width linear 200ms;
+	}
+	&__circle {
+		margin-top: -10px;
+		margin-right: -13px;
+		width: 27px;
+		height: 27px;
+		display: block;
+		float: right;
+		border-radius: 50%;
+	}
+	&__circlePoint {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 11px;
+		height: 11px;
+		border-radius: 50%;
+		background-color: #749064;
 	}
 }
