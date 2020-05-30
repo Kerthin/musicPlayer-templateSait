@@ -165,3 +165,27 @@ function shuffle(e) {
 		e.target.classList.remove("_shuffle");
 	}
 }
+
+// 5 SECONDS AGO
+function backward() {
+	const audio = document.getElementById(currentAudio);
+	audio.currentTime -= 5;
+	if (!isPlaying) {
+		changeBar();
+	}
+}
+
+// 5 SECONDS AHEAD
+function forward() {
+	const audio = document.getElementById(currentAudio);
+	audio.currentTime += 5;
+	if (!isPlaying) {
+		changeBar();
+	}
+}
+
+// STOP MUSIC
+function stopMusic() {
+	playBtn.classList.add("_play");
+	isPlaying = false;
+}
