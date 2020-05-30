@@ -3,70 +3,70 @@
 	{
 		id: 1,
 		class: 'jerryHerman',
-		url: "../music/JerryHerman_PutOnYourSundayClothes.mp3",
+		url: "music/JerryHerman_PutOnYourSundayClothes.mp3",
 		author: "Jerry Herman",
 		title: "Put On Your Sunday"
 	},
 	{
 		id: 2,
 		class: 'elvisPresley',
-		url: "../music/ElvisPresley_CantHelpFallingInLove.mp3",
+		url: "music/ElvisPresley_CantHelpFallingInLove.mp3",
 		author: "Elvis Presley",
 		title: "Can't Falling In Love"
 	},
 	{
 		id: 3,
 		class: 'royOrbison',
-		url: "../music/RoyOrbison_OhPrettyWoman.mp3",
+		url: "music/RoyOrbison_OhPrettyWoman.mp3",
 		author: "Roy Orbison",
 		title: "Oh, Pretty Woman"
 	},
 	{
 		id: 4,
 		class: 'frankSinatra',
-		url: "../music/FrankSinatra_ThatsLife.mp3",
+		url: "music/FrankSinatra_ThatsLife.mp3",
 		author: "Frank Sinatra",
 		title: "That's Life"
 	},
 	{
 		id: 5,
 		class: 'jimCroce',
-		url: "../music/JimCroce_TimeInABottle.mp3",
+		url: "music/JimCroce_TimeInABottle.mp3",
 		author: "Jim Croce",
 		title: "Time In A Bottle"
 	},
 	{
 		id: 6,
 		class: 'redHotChiliPeppers',
-		url: "../music/RedHotChiliPeppers_DarkNecessities.mp3",
+		url: "music/RedHotChiliPeppers_DarkNecessities.mp3",
 		author: "Red Hot Chili Peppers",
 		title: "Dark Necessities"
 	},
 	{
 		id: 7,
 		class: 'stephaneGrappelli',
-		url: "../music/StephaneGrappelli_laMer.mp3",
+		url: "music/StephaneGrappelli_laMer.mp3",
 		author: "Stephane Grappelli",
 		title: "La Mer"
 	},
 	{
 		id: 8,
 		class: 'evanKing',
-		url: "../music/EvanKing_Overwatch.mp3",
+		url: "music/EvanKing_Overwatch.mp3",
 		author: "Evan King",
 		title: "Overwatch"
 	},
 	{
 		id: 9,
 		class: 'JR',
-		url: "../music/JR_SouthSac.mp3",
+		url: "music/JR_SouthSac.mp3",
 		author: "JR",
 		title: "SouthSac"
 	},
 	{
 		id: 10,
 		class: 'theDeli',
-		url: "../music/TheDeli_Sun.mp3",
+		url: "music/TheDeli_Sun.mp3",
 		author: "The Deli",
 		title: "Sun"
 	}
