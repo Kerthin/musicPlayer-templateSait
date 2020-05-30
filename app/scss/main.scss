@@ -19,7 +19,7 @@
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
-	background-image: url('../img/bg/bg.png');
+	background-image: url('../image/bg/bg.png');
 }
 
 .player {
@@ -89,7 +89,7 @@
 
 		&:before {
 			background-position: 8px center;
-			background-image: url('../img/icon/prevFull.png');
+			background-image: url('../image/icon/prev.png');
 		}
 	}
 	._next {
@@ -97,7 +97,7 @@
 
 		&:before {
 			background-position: 10px center;
-			background-image: url('../img/icon/nextFull.png');
+			background-image: url('../image/icon/next.png');
 		}
 	}
 }
@@ -105,7 +105,7 @@
 @mixin albumBgMix($albumBgName, $imageFormat) {
 	.#{$albumBgName} {
 		.album:before {
-			background-image: url(../img/albumBg/#{$albumBgName}.#{$imageFormat});
+			background-image: url(../image/albumBg/#{$albumBgName}.#{$imageFormat});
 		}
 	}
 }
@@ -150,7 +150,7 @@
 		transform: translateX(-50%) translateY(-50%);
 		box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.3),
 		            inset -4px -4px 6px -1px rgba(0,0,0,0.3);
-		background-image: url('../img/albumBg/JR.jpg');
+		background-image: url('../image/albumBg/JR.jpg');
 		background-size: cover;
 		background-color: transparent;
 	}
@@ -306,11 +306,11 @@
 	&__loop {
 		width: 28.5px;
 		height: 100%;
-		background-image: url('../img/icon/loop.png');
+		background-image: url('../image/icon/loop.png');
 	}
 	&__loop {
 		&._repeat {
-			background-image: url('../img/icon/repeat.png');
+			background-image: url('../image/icon/repeat.png');
 		}
 	}
 	&__loop {
@@ -321,7 +321,7 @@
 	&__shuffle {
 		width: 28.5px;
 		height: 100%;
-		background-image: url('../img/icon/shuffle.png');
+		background-image: url('../image/icon/shuffle.png');
 		opacity: .5;
 	}
 	&__shuffle {
@@ -355,13 +355,13 @@
 		&._pause {
 			&:before {
 				background-position: 18px center;
-				background-image: url('../img/icon/pause.png');
+				background-image: url('../image/icon/pause.png');
 			}
 		}
 		&._play {
 			&:before {
 				background-position: 20px center;
-				background-image: url('../img/icon/play.png');
+				background-image: url('../image/icon/play.png');
 			}
 			&:active:before {
 				background-size: 34%;
@@ -398,13 +398,13 @@
 	&__backward {
 		&:before {
 			background-position: 12px center;
-			background-image: url('../img/icon/backward.png');
+			background-image: url('../image/icon/backward.png');
 		}
 	}
 	&__forward {
 		&:before {
 			background-position: 16px center ;
-			background-image: url('../img/icon/forward.png');
+			background-image: url('../image/icon/forward.png');
 		}
 	}
 }
