@@ -189,3 +189,24 @@ function stopMusic() {
 	playBtn.classList.add("_play");
 	isPlaying = false;
 }
+
+// THE START OF THE NEXT TRACK
+function goToNextMusic() {
+	let newId = currentId;
+	while (isShuffle && !loopOne && newId === currentId) {
+		newId = Math.floor(Math.random() * Math.floor(list.length - 1));
+	}
+
+	if (!isShuffle && !loopOne) {
+		currentId = currentId + 1 > list.length - 1 ? 0 : currentId + 1;
+	}
+	if (!isShuffle && loopOne) {
+		currentId = currentId;
+	}
+
+	if (isShuffle) {
+		currentId = newId;
+	}
+	init();
+	document.getElementById(currentAudio).play();
+}
