@@ -210,3 +210,34 @@ function goToNextMusic() {
 	init();
 	document.getElementById(currentAudio).play();
 }
+
+// THE PLAYBACK MODE OF THE TRACK
+function loop(e) {
+	const audio = document.getElementById(currentAudio);
+
+	if (!isLoop && !loopOne) {
+		isLoop = true;
+		loopOne = false;
+		e.target.classList.remove("_off");
+		e.target.classList.add("_loop");
+		audio.loop = false;
+		audio.onended = e => goToNextMusic();
+		console.log(isLoop, loopOne);
+	} else if (isLoop && !loopOne) {
+		isLoop = true;
+		loopOne = true;
+		e.target.classList.remove("_loop");
+		e.target.classList.add("_repeat");
+		audio.loop = true;
+		audio.onended = e => goToNextMusic();
+		console.log(isLoop, loopOne);
+	} else {
+		isLoop = false;
+		loopOne = false;
+		e.target.classList.remove("_repeat");
+		e.target.classList.add("_off");
+		audio.loop = false;
+		audio.onended = e => stopMusic();
+		console.log(isLoop, loopOne);
+	}
+}
