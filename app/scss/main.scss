@@ -101,3 +101,13 @@
 		}
 	}
 }
+
+@mixin albumBgMix($albumBgName, $imageFormat) {
+	.#{$albumBgName} {
+		.album:before {
+			background-image: url(../img/albumBg/#{$albumBgName}.#{$imageFormat});
+		}
+	}
+}
+
+@include albumBgMix('jerryHerman', 'jpg');
