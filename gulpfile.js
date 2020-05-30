@@ -18,6 +18,7 @@ var		path 			= {
 			dist: 			{
 				image: 	'dist/image/'	,
 				fonts: 	'dist/fonts/'	,
+				music: 	'dist/music/'	,
 				html: 	'dist/'			,
 				css: 	'dist/css/'		,
 				js: 	'dist/js/'
@@ -25,6 +26,7 @@ var		path 			= {
 			app:			{
 				image: 	'app/image/**/*.*'	,
 				fonts: 	'app/fonts/**/*.*'	,
+				music: 	'app/music/**/*.*'	,
 				scss: 	'app/scss/*.scss',
 				pug:	'app/*.pug'			,
 				js: 	'app/js/*.js'	
@@ -32,6 +34,7 @@ var		path 			= {
 			watch: 			{
 				image: 	'app/image/**/*.*',
 				fonts: 	'app/fonts/**/*.*',
+				music: 	'app/music/**/*.*',
 				html: 	'app/**/*.html',
 				scss: 	'app/scss/*.scss',
 				pug:	'app/*.pug'			,
@@ -66,7 +69,7 @@ gulp.task('js:dist',	function()	{
 	gulp.src(path.app.js)
 		.pipe(rigger())
 		.pipe(sourcemaps.init())
-		.pipe(uglify())
+		// .pipe(uglify())
 		.pipe(sourcemaps.write())
 		.pipe(gulp.dest(path.dist.js))
 		.pipe(reload({stream:	true}));
@@ -100,12 +103,18 @@ gulp.task('fonts:dist',	function()	{
 		.pipe(gulp.dest(path.dist.fonts))
 });
 
+gulp.task('fonts:music',	function()	{
+	gulp.src(path.app.music)
+		.pipe(gulp.dest(path.dist.music))
+});
+
 gulp.task('dist',	[
 	'html:dist'		,
 	'style:dist'	,
 	'js:dist'		,
 	'image:dist'	,
-	'fonts:dist'
+	'fonts:dist'	,
+	'fonts:music'
 ]);
 
 gulp.task('watch',	function()	{
@@ -123,6 +132,9 @@ gulp.task('watch',	function()	{
 	// });
 	watch([path.watch.fonts],	function(event,	cb)	{
 		gulp.start('fonts:dist');
+	});
+	watch([path.watch.music],	function(event,	cb)	{
+		gulp.start('fonts:music');
 	});
 });
 
