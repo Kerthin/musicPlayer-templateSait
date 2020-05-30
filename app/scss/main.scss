@@ -219,3 +219,27 @@
 		color: #a3a496;
 	}
 }
+
+.musicTime {
+	position: absolute;
+	top: 544px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 340px;
+	height: 15px;
+
+	.musicTime__current,
+	.musicTime__last {
+		font-family: sans-serif;
+		font-size: 15px;
+		text-align: center;
+		font-weight: 100;
+		color: #a3a496;
+	}
+	.musicTime__current {
+		float: left;
+	}
+	.musicTime__last {
+		float: right;
+	}
+}
