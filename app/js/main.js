@@ -112,3 +112,29 @@ function play(e) {
 		clearInterval(timer);
 	}
 }
+
+// TIME
+function changeBar() {
+	const audio = document.getElementById(currentAudio);
+	const percentage = (audio.currentTime / audio.duration).toFixed(3);
+	progressBar.style.transition = "";
+
+	//set current time
+	const minute = Math.floor(audio.currentTime / 60);
+	const second = Math.floor(audio.currentTime % 60);
+	const leftTime = audio.duration - audio.currentTime;
+	currentTimeIndicator.innerHTML = ("0" + minute).substr(-2) + ":" + ("0" + second).substr(-2);
+
+	//set left time
+	const leftMinute = Math.floor(leftTime / 60);
+	const leftSecond = Math.floor(leftTime % 60);
+
+	leftTimeIndicator.innerHTML = ("0" + leftMinute).substr(-2) + ":" + ("0" + leftSecond).substr(-2);
+
+	//set time bar
+	progressBar.style.width = percentage * 100 + "%";
+}
+
+function showTime() {
+	timer = setInterval(() => changeBar(), 500);
+}
