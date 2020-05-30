@@ -1,0 +1,103 @@
+* {
+	padding: 0;
+	margin: 0;
+	outline: none;
+	box-sizing: border-box;
+	-ms-user-select: none;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+}
+::-webkit-scrollbar {
+	width: 0;
+}
+
+.container {
+	width: 100%;
+	height: 100vh;
+	background-color: #f5f6e7;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-image: url('../img/bg/bg.png');
+}
+
+.player {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 433px;
+	height: 814px;
+	transform: translate(-50%, -50%);
+	border-radius: 50px;
+	background-color: #f5f6e7;
+	box-shadow: -3px -3px 9px 0.1px #fff, 3px 3px 9px 0.1px #ccc;
+	overflow: hidden;
+}
+.contentWrapper {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 365px;
+	height: 708px;
+	transform: translate(-50%, -50%);
+}
+
+.button {
+	background: #f5f6e7;
+	border-radius: 50%;
+	box-shadow: -3px -3px 9px 0.1px #fff, 3px 3px 9px 0.1px #ccc;
+	position: relative;
+	cursor: pointer;
+
+	&:before {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		content: "";
+		background-color: #f5f6e7;
+		width: 85%;
+		height: 85%;
+		display: inline-block;
+		border-radius: 50%;
+		box-shadow: -1px -1px 2px 0.1px #fff, 5px 5px 10px 0.1px #ccc;
+		background-size: 50%;
+		background-repeat: no-repeat;
+	}
+
+	&:active:before {
+		background-size: 49%;
+		box-shadow: inset -3px -3px 5px 0.1px #fff, inset 3px 3px 5px 0.7px #ccc;
+	}
+}
+
+.musicSwitch {
+	position: absolute;
+	left: 50%;
+	height: 44px;
+	width: 340px;
+	transform: translateX(-50%);
+
+	._prev,
+	._next {
+		width: 44px;
+		height: 44px;
+	}
+	._prev {
+		float: left;
+
+		&:before {
+			background-position: 8px center;
+			background-image: url('../img/icon/prevFull.png');
+		}
+	}
+	._next {
+		float: right;
+
+		&:before {
+			background-position: 10px center;
+			background-image: url('../img/icon/nextFull.png');
+		}
+	}
+}
