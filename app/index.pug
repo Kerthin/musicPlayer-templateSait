@@ -4,4 +4,29 @@ html
 		include template/partials/linkMain.pug
 	body
 		.container
+			.player
+				.contentWrapper
+					.musicSwitch
+						#prev.button._prev
+						#next.button._next
+					#jsAlbum
+						.album
+							.album__internal
+					.musicInfo
+						h1.musicInfo__name
+						h2.musicInfo__author
+					.musicTime
+						p.musicTime__current
+						p.musicTime__last
+					#progress.musicBar
+						#length.musicBar__length
+							.button.musicBar__circle
+								.musicBar__circlePoint
+					.musicOrder
+						#loop.musicOrder__loop._loop
+						#shuffle.musicOrder__shuffle
+					.musicControl
+						#backward.button.musicControl__backward
+						#play.button.musicControl__play._play
+						#forward.button.musicControl__forward
 		include template/partials/scriptMain.pug
