@@ -155,3 +155,13 @@ function nextMusic(mode) {
 		init();
 	}
 }
+
+// STARTING A RANDOM TRACK
+function shuffle(e) {
+	isShuffle = !isShuffle;
+	if (isShuffle) {
+		e.target.classList.add("_shuffle");
+	} else {
+		e.target.classList.remove("_shuffle");
+	}
+}
