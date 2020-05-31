@@ -1,3 +1,12 @@
+$palettePrimary: #f5f6e7;
+$paletteTitleColor: #424234;
+$paletteTextColor:  #a3a496;
+$paletteMusicBar:  #efefef;
+$paletteControlButtons:  #749064;
+
+$paletteLightShadow: #fff;
+$paletteDarkShadow: #ccc;
+
 * {
 	padding: 0;
 	margin: 0;
@@ -15,7 +24,7 @@
 .container {
 	width: 100%;
 	height: 100vh;
-	background-color: #f5f6e7;
+	background-color: $palettePrimary;
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -29,8 +38,8 @@
 	height: 814px;
 	transform: translate(-50%, -50%);
 	border-radius: 50px;
-	background-color: #f5f6e7;
-	box-shadow: -3px -3px 9px 0.1px #fff, 3px 3px 9px 0.1px #ccc;
+	background-color: $palettePrimary;
+	box-shadow: -3px -3px 9px 0.1px $paletteLightShadow, 3px 3px 9px 0.1px $paletteDarkShadow;
 	overflow: hidden;
 }
 .contentWrapper {
@@ -43,9 +52,9 @@
 }
 
 .button {
-	background: #f5f6e7;
+	background: $palettePrimary;
 	border-radius: 50%;
-	box-shadow: -3px -3px 9px 0.1px #fff, 3px 3px 9px 0.1px #ccc;
+	box-shadow: -3px -3px 9px 0.1px $paletteLightShadow, 3px 3px 9px 0.1px $paletteDarkShadow;
 	position: relative;
 	cursor: pointer;
 
@@ -55,7 +64,7 @@
 		left: 50%;
 		transform: translate(-50%, -50%);
 		content: "";
-		background-color: #f5f6e7;
+		background-color: $palettePrimary;
 		width: 85%;
 		height: 85%;
 		display: inline-block;
@@ -135,7 +144,7 @@
 				-0.5px -0.5px 0 rgba(255,255,255,1),
 				0.5px 0.5px 0 rgba(0,0,0,0.02);
 	z-index: 5;
-	background-color: #f5f6e7;
+	background-color: $palettePrimary;
 
 	&:before {
 		position: absolute;
@@ -208,14 +217,14 @@
 		text-align: center;
 		font-weight: 500;
 		margin-bottom: 8px;
-		color: #424234;
+		color: $paletteTitleColor;
 	}
 	&__author {
 		font-family: sans-serif;
 		font-size: 15px;
 		text-align: center;
 		font-weight: 100;
-		color: #a3a496;
+		color: $paletteTextColor;
 	}
 }
 
@@ -233,7 +242,7 @@
 		font-size: 15px;
 		text-align: center;
 		font-weight: 100;
-		color: #a3a496;
+		color: $paletteTextColor;
 	}
 	&__current {
 		float: left;
@@ -251,13 +260,13 @@
 	width: 340px;
 	height: 7px;
 	border-radius: 5px;
-	background-color: #efefef;
+	background-color: $paletteMusicBar;
 	cursor: pointer;
 
 	&__length {
 		display: block;
 		width: 0%;
-		background: #749064;
+		background-color: $paletteControlButtons;
 		height: 100%;
 		border-radius: 5px;
 		transition: width linear 200ms;
@@ -279,7 +288,7 @@
 		width: 11px;
 		height: 11px;
 		border-radius: 50%;
-		background-color: #749064;
+		background-color: $paletteControlButtons;
 	}
 }
 
@@ -339,7 +348,7 @@
 	height: 67px;
 
 	&__play {
-		background: #749064;
+		background-color: $paletteControlButtons;
 		box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.2),
 					-6px -6px 10px -1px rgba(255,255,255,0.05);
 
@@ -368,7 +377,7 @@
 		}
 
 		&:before {
-			background: #749064;
+			background-color: $paletteControlButtons;
 			box-shadow: -1px -1px 2px 0.1px rgba(0,0,0,0.2), 5px 5px 10px 0.1px rgba(0,0,0,0.2);
 		}
 		&:active:before {
