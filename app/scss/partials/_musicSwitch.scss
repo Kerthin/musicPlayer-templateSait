@@ -1,0 +1,29 @@
+.musicSwitch {
+	position: absolute;
+	left: 50%;
+	height: 44px;
+	width: 340px;
+	transform: translateX(-50%);
+
+	._prev,
+	._next {
+		width: 44px;
+		height: 44px;
+	}
+	._prev {
+		float: left;
+
+		&:before {
+			background-position: 8px center;
+			background-image: url('../image/icon/prev.png');
+		}
+	}
+	._next {
+		float: right;
+
+		&:before {
+			background-position: 10px center;
+			background-image: url('../image/icon/next.png');
+		}
+	}
+}

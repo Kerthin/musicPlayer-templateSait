@@ -1,0 +1,39 @@
+.musicBar {
+	position: absolute;
+	top: 572px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 340px;
+	height: 7px;
+	border-radius: 5px;
+	background-color: $paletteMusicBar;
+	cursor: pointer;
+
+	&__length {
+		display: block;
+		width: 0%;
+		background-color: $paletteControlButtons;
+		height: 100%;
+		border-radius: 5px;
+		transition: width linear 200ms;
+	}
+	&__circle {
+		margin-top: -10px;
+		margin-right: -13px;
+		width: 27px;
+		height: 27px;
+		display: block;
+		float: right;
+		border-radius: 50%;
+	}
+	&__circlePoint {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 11px;
+		height: 11px;
+		border-radius: 50%;
+		background-color: $paletteControlButtons;
+	}
+}

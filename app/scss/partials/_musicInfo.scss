@@ -1,0 +1,24 @@
+.musicInfo {
+	position: absolute;
+	top: 451px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 185px;
+	height: 58px;
+
+	&__name {
+		font-family: sans-serif;
+		font-size: 30px;
+		text-align: center;
+		font-weight: 500;
+		margin-bottom: 8px;
+		color: $paletteTitleColor;
+	}
+	&__author {
+		font-family: sans-serif;
+		font-size: 15px;
+		text-align: center;
+		font-weight: 100;
+		color: $paletteTextColor;
+	}
+}

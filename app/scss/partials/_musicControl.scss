@@ -1,0 +1,77 @@
+.musicControl {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 255px;
+	height: 67px;
+
+	&__play {
+		background-color: $paletteControlButtons;
+		box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.2),
+					-6px -6px 10px -1px rgba(255,255,255,0.05);
+
+		&._pause,
+		&._play {
+			&:before {
+				background-repeat: no-repeat;
+				background-size: 35%;
+			}
+		}
+
+		&._pause {
+			&:before {
+				background-position: 18px center;
+				background-image: url('../image/icon/pause.png');
+			}
+		}
+		&._play {
+			&:before {
+				background-position: 20px center;
+				background-image: url('../image/icon/play.png');
+			}
+			&:active:before {
+				background-size: 34%;
+			}
+		}
+
+		&:before {
+			background-color: $paletteControlButtons;
+			box-shadow: -1px -1px 2px 0.1px rgba(0,0,0,0.2), 5px 5px 10px 0.1px rgba(0,0,0,0.2);
+		}
+		&:active:before {
+			box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.2),
+						inset -4px -4px 6px -1px rgba(255,255,255,0.2);
+		}
+	}
+
+	&__backward,
+	&__play,
+	&__forward {
+		display: block;
+		float: left;
+	}
+	&__backward,
+	&__play {
+		margin-right: 27px;
+	}
+	&__backward,
+	&__play,
+	&__forward {
+		width: 67px;
+		height: 67px;
+	}
+
+	&__backward {
+		&:before {
+			background-position: 12px center;
+			background-image: url('../image/icon/backward.png');
+		}
+	}
+	&__forward {
+		&:before {
+			background-position: 16px center ;
+			background-image: url('../image/icon/forward.png');
+		}
+	}
+}

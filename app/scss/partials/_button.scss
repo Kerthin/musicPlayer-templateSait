@@ -1,0 +1,28 @@
+.button {
+	background: $palettePrimary;
+	border-radius: 50%;
+	box-shadow: -3px -3px 9px 0.1px $paletteLightShadow, 3px 3px 9px 0.1px $paletteDarkShadow;
+	position: relative;
+	cursor: pointer;
+
+	&:before {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		content: "";
+		background-color: $palettePrimary;
+		width: 85%;
+		height: 85%;
+		display: inline-block;
+		border-radius: 50%;
+		box-shadow: -1px -1px 2px 0.1px #fff, 5px 5px 10px 0.1px #ccc;
+		background-size: 50%;
+		background-repeat: no-repeat;
+	}
+
+	&:active:before {
+		background-size: 49%;
+		box-shadow: inset -3px -3px 5px 0.1px #fff, inset 3px 3px 5px 0.7px #ccc;
+	}
+}

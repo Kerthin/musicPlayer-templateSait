@@ -1,0 +1,92 @@
+@mixin albumBgMix($albumBgName, $imageFormat) {
+	.#{$albumBgName} {
+		.album:before {
+			background-image: url(../image/albumBg/#{$albumBgName}.#{$imageFormat});
+		}
+	}
+}
+
+@include albumBgMix('jerryHerman', 'jpg');
+@include albumBgMix('elvisPresley', 'jpg');
+@include albumBgMix('royOrbison', 'jpg');
+@include albumBgMix('frankSinatra', 'jpg');
+@include albumBgMix('jimCroce', 'jpg');
+@include albumBgMix('redHotChiliPeppers', 'jpg');
+@include albumBgMix('stephaneGrappelli', 'jpg');
+@include albumBgMix('evanKing', 'jpg');
+@include albumBgMix('JR', 'jpg');
+@include albumBgMix('theDeli', 'png');
+
+.album {
+	position: absolute;
+	top: 86px;
+	left: 50%;
+	transform: translateX(-50%);
+	display: inline-block;
+	width: 300px;
+	height: 300px;
+	border-radius: 100%;
+	text-align: center;
+	box-shadow: 15px 15px 30px -10px rgba(0,0,0,0.15),
+				-20px -20px 20px -10px rgba(255,255,255,1),
+				-0.5px -0.5px 0 rgba(255,255,255,1),
+				0.5px 0.5px 0 rgba(0,0,0,0.02);
+	z-index: 5;
+	background-color: $palettePrimary;
+
+	&:before {
+		position: absolute;
+		content: '';
+		display: block;
+		width: 85%;
+		height: 85%;
+		border-radius: inherit;
+		left: 50%;
+		top: 50%;
+		transform: translateX(-50%) translateY(-50%);
+		box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.3),
+		            inset -4px -4px 6px -1px rgba(0,0,0,0.3);
+		background-image: url('../image/albumBg/JR.jpg');
+		background-size: cover;
+		background-color: transparent;
+	}
+	&:after {
+		position: absolute;
+		content: '';
+		display: block;
+		width: 70%;
+		height: 70%;
+		border-radius: inherit;
+		left: 50%;
+		top: 50%;
+		background-color: rgba(0,0,0,0.025);
+		border: 1px solid rgba(0,0,0,0.01);
+		transform: translateX(-50%) translateY(-50%);
+		box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.3),
+		            inset -4px -4px 6px -1px rgba(0,0,0,0.3);
+	}
+
+	&__internal {
+		position: relative;
+		margin-top: 45px;
+		display: inline-block;
+		width: 210px;
+		height: 210px;
+		border-radius: 100%;
+		text-align: center;
+
+		&:before {
+			position: absolute;
+			content: '';
+			display: block;
+			width: 80%;
+			height: 80%;
+			border-radius: inherit;
+			left: 50%;
+			top: 50%;
+			transform: translateX(-50%) translateY(-50%);
+			box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.3),
+			            inset -4px -4px 6px -1px rgba(0,0,0,0.3);
+		}
+	}
+}
