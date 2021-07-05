@@ -80,6 +80,7 @@ let isShuffle = false;
 let currentAudio = "music1";
 let timer = null;
 
+const albumWrap = document.querySelector(".album");
 const currentTimeIndicator = document.querySelector(".musicTime__current");
 const leftTimeIndicator = document.querySelector(".musicTime__last");
 const progressBar = document.getElementById("length");
@@ -101,12 +102,20 @@ function play(e) {
 	if (!isPlaying) {
 		e.target.classList.remove("_play");
 		e.target.classList.add("_pause");
+
+		albumWrap.classList.remove("_play");
+		albumWrap.classList.add("_pause");
+
 		isPlaying = true;
 		document.getElementById(currentAudio).play();
 		showTime();
 	} else {
 		e.target.classList.remove("_pause");
 		e.target.classList.add("_play");
+
+		albumWrap.classList.remove("_pause");
+		albumWrap.classList.add("_play");
+
 		isPlaying = false;
 		document.getElementById(currentAudio).pause();
 		clearInterval(timer);
@@ -143,6 +152,10 @@ function showTime() {
 function nextMusic(mode) {
 	playBtn.classList.remove("_pause");
 	playBtn.classList.add("_play");
+
+	albumWrap.classList.remove("_pause");
+	albumWrap.classList.add("_play");
+
 	document.getElementById(currentAudio).pause();
 	isPlaying = false;
 	clearInterval(timer);
@@ -187,6 +200,7 @@ function forward() {
 // STOP MUSIC
 function stopMusic() {
 	playBtn.classList.add("_play");
+	albumWrap.classList.add("_play");
 	isPlaying = false;
 }
 

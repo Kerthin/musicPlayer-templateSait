@@ -34,6 +34,12 @@
 	z-index: 5;
 	background-color: $palettePrimary;
 
+	&._pause {
+		&:before {
+			animation: rotateAlbum 15s linear infinite;
+		}
+	}
+
 	&:before {
 		position: absolute;
 		content: '';
@@ -49,6 +55,7 @@
 		background-image: url('../image/albumBg/JR.jpg');
 		background-size: cover;
 		background-color: transparent;
+		animation: rotateAlbum 15s linear infinite paused;
 	}
 	&:after {
 		position: absolute;
@@ -88,5 +95,14 @@
 			box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.3),
 			            inset -4px -4px 6px -1px rgba(0,0,0,0.3);
 		}
+	}
+}
+
+@keyframes rotateAlbum {
+	0% {
+		transform: translateX(-50%) translateY(-50%) rotate(0deg);
+	}
+	100% {
+		transform: translateX(-50%) translateY(-50%) rotate(-360deg);
 	}
 }
