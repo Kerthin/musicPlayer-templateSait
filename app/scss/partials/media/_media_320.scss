@@ -1,0 +1,128 @@
+@media screen and (max-width: 320px) {
+	.player {
+		width: 320px;
+		height: 568px;
+	}
+	.contentWrapper {
+		width: 270px;
+		height: 523px;
+	}
+	.musicSwitch {
+		height: 32.5px;
+		width: 251px;
+
+		._prev,
+		._next {
+			width: 32.5px;
+			height: 32.5px;
+		}
+		._prev {
+			&:before {
+				background-position: 6px center;
+			}
+		}
+		._next {
+			&:before {
+				background-position: 7.4px center;
+			}
+		}
+	}
+	.album {
+		top: 63.6px;
+		width: 222px;
+		height: 222px;
+
+		&__internal {
+			margin-top: 33.3px;
+			width: 155px;
+			height: 155px;
+		}
+	}
+	.musicInfo {
+		top: 333px;
+		width: 136.7px;
+		height: 43px;
+
+		&__name {
+			font-size: 22px;
+			margin-bottom: 6px;
+		}
+		&__author {
+			font-size: 11px;
+		}
+	}
+	.musicTime {
+		top: 402px;
+		width: 251px;
+		height: 11px;
+
+		&__current,
+		&__last {
+			font-size: 11px;
+		}
+	}
+	.musicBar {
+		top: 423px;
+		width: 251px;
+		height: 5px;
+
+		&__circle {
+			margin-top: -7.4px;
+			margin-right: -9.6px;
+			width: 20px;
+			height: 20px;
+		}
+		&__circlePoint {
+			width: 8px;
+			height: 8px;
+		}
+	}
+	.musicOrder {
+		bottom: 16.8px;
+		height: 16.3px;
+
+		&__loop,
+		&__shuffle {
+			width: 20.5px;
+		}
+	}
+	.musicControl {
+		width: 188.5px;
+		height: 49.5px;
+
+		&__play {
+			&._pause {
+				&:before {
+					background-position: 13.3px center;
+				}
+			}
+		}
+		&__play {
+			&._play {
+				&:before {
+					background-position: 14.8px center;
+				}
+			}
+		}
+		&__backward,
+		&__play {
+			margin-right: 20px;
+		}
+		&__backward,
+		&__play,
+		&__forward {
+			width: 49.5px;
+			height: 49.5px;
+		}
+		&__backward {
+			&:before {
+				background-position: 8.9px center;
+			}
+		}
+		&__forward {
+			&:before {
+				background-position: 11.8px center;
+			}
+		}
+	}
+}

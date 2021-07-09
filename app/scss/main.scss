@@ -5,10 +5,8 @@
 	margin: 0;
 	outline: none;
 	box-sizing: border-box;
-	-ms-user-select: none;
-	-moz-user-select: none;
-	-khtml-user-select: none;
-	-webkit-user-select: none;
+	user-select: none;
+	-webkit-tap-highlight-color: transparent;
 }
 ::-webkit-scrollbar {
 	width: 0;
@@ -54,4 +52,37 @@
 @import 'partials/_musicControl.scss';
 
 @import 'partials/media/_media_433.scss';
+@import 'partials/media/_media_414.scss';
 @import 'partials/media/_media_375.scss';
+@import 'partials/media/_media_320.scss';
+
+@media screen and (min-width: 433px) and (max-height: 850px) {
+	.player {
+		transform: translate(-50%, -50%) scale(.8);
+	}
+}
+@media screen and (min-width: 433px) and (max-height: 690px) {
+	.player {
+		transform: translate(-50%, -50%) scale(.6);
+	}
+}
+@media screen and (min-width: 433px) and (max-height: 530px) {
+	.player {
+		transform: translate(-50%, -50%) scale(.4);
+	}
+}
+@media screen and (min-width: 433px) and (max-height: 360px) {
+	.player {
+		transform: translate(-50%, -50%) scale(.35);
+	}
+}
+@media screen and (min-width: 433px) and (max-height: 300px) {
+	.player {
+		transform: translate(-50%, -50%) scale(.25);
+	}
+}
+@media screen and (min-width: 433px) and (max-height: 230px) {
+	.player {
+		transform: translate(-50%, -50%) scale(.15);
+	}
+}

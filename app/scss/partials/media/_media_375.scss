@@ -1,49 +1,60 @@
 @media screen and (max-width: 375px) {
-	.container {
-		background-image: none;
-	}
 	.player {
+		width: 375px;
 		height: 667px;
-		border-radius: 0;
-		box-shadow: none;
 	}
 	.contentWrapper {
-		height: 579px;
+		width: 316px;
+		height: 613px;
 	}
 	.musicSwitch {
-		height: 36px;
+		height: 38px;
+		width: 294px;
 
 		._prev,
 		._next {
-			width: 36px;
-			height: 36px;
+			width: 38px;
+			height: 38px;
+		}
+		._prev {
+			&:before {
+				background-position: 7px center;
+			}
+		}
+		._next {
+			&:before {
+				background-position: 8.6px center;
+			}
 		}
 	}
 	.album {
-		top: 71px;
-		width: 245px;
-		height: 245px;
+		top: 74.5px;
+		width: 260px;
+		height: 260px;
 
 		&__internal {
-			margin-top: 37px;
-			width: 172px;
-			height: 172px;
+			margin-top: 39px;
+			width: 182px;
+			height: 182px;
 		}
 	}
 	.musicInfo {
-		top: 369px;
-		height: 48px;
+		top: 390px;
+		width: 160px;
+		height: 50px;
 
 		&__name {
-			font-size: 24px;
+			font-size: 26px;
+			margin-bottom: 7px;
 		}
 		&__author {
-			font-size: 12px;
+			font-size: 13px;
 		}
 	}
 	.musicTime {
-		top: 445px;
-		height: 12px;
+		top: 471px;
+		width: 294px;
+		height: 13px;
 
 		&__current,
 		&__last {
@@ -51,59 +62,66 @@
 		}
 	}
 	.musicBar {
-		top: 468px;
+		top: 497px;
+		width: 294px;
 		height: 6px;
 
 		&__circle {
-			margin-right: -10px;
+			margin-top: -8.6px;
+			margin-right: -11px;
 			width: 23px;
 			height: 23px;
 		}
 		&__circlePoint {
-			width: 9px;
-			height: 9px;
+			width: 9.5px;
+			height: 9.5px;
 		}
 	}
 	.musicOrder {
-		bottom: 19px;
-		height: 16px;
+		bottom: 19.5px;
+		height: 19px;
+
+		&__loop,
+		&__shuffle {
+			width: 25px;
+		}
 	}
 	.musicControl {
-		width: 222px;
-		height: 55px;
+		width: 221px;
+		height: 58px;
 
 		&__play {
 			&._pause {
 				&:before {
-					background-position: 15px center;
+					background-position: 15.5px center;
 				}
 			}
 		}
 		&__play {
 			&._play {
 				&:before {
-					background-position: 16px center;
+					background-position: 17px center;
 				}
 			}
 		}
 		&__backward,
 		&__play {
-			margin-right: 24px;
+			margin-right: 23.4px;
 		}
 		&__backward,
 		&__play,
 		&__forward {
-			width: 55px;
-			height: 55px;
+			width: 58px;
+			height: 58px;
 		}
 		&__backward {
 			&:before {
-				background-position: 9px center;
+				background-position: 10px center;
 			}
 		}
 		&__forward {
 			&:before {
-				background-position: 13px center ;
+				background-position: 14px center;
 			}
 		}
 	}
