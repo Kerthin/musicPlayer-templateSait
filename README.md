@@ -200,11 +200,11 @@ The image of the website:
 
 #### Gif
 
-	- Switch <br/>
-	<a href="#"><img src="https://rawcdn.githack.com/Kerthin/musicPlayer-templateSait/ebf136009a59b12eb83693f80f50ec19e85347a8/READMEimage/switch.gif" /></a>
+  - Calculation <br/>
+  <a href="#"><img src="READMEimage/switch.gif" /></a>
 
-	- Playing <br/>
-	<a href="#"><img src="https://rawcdn.githack.com/Kerthin/musicPlayer-templateSait/ebf136009a59b12eb83693f80f50ec19e85347a8/READMEimage/playing.gif" /></a>
+  - Dark Theme <br/>
+  <a href="#"><img src="READMEimage/playing.gif" /></a>
 
 #### Desktop
 <a href="#"><img src="READMEimage/desktop.png" /></a>
